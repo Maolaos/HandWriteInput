@@ -21,9 +21,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.softwaretest.BaseApplication;
+import com.example.softwaretest.FileUtil;
 import com.googlecode.openwnn.legacy.CandidateFilter;
 import com.googlecode.openwnn.legacy.ComposingText;
 import com.googlecode.openwnn.legacy.OpenWnnDictionaryImpl;
@@ -136,9 +137,9 @@ public class OpenWnnEngineZH implements WnnEngine {
 	 * @param dicFilePath
 	 *            The DB file for the user/learning dictionary
 	 */
-	public OpenWnnEngineZH(String dicLib, String dicFilePath) {
+	public OpenWnnEngineZH(String dicLib, String dicFilePath, Context context) {
 		/* load Chinese dictionary library */
-		mDictionaryZH = new OpenWnnDictionaryImpl(BaseApplication.composeLocation("lib/") + dicLib, dicFilePath);
+		mDictionaryZH = new OpenWnnDictionaryImpl(FileUtil.composeLocation("lib/",context) + dicLib, dicFilePath);
 		if (!mDictionaryZH.isActive()) {
 			mDictionaryZH = new OpenWnnDictionaryImpl("/system/lib/" + dicLib, dicFilePath);
 		}

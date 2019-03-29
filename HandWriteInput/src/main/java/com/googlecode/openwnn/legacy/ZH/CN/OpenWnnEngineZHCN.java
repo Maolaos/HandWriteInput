@@ -43,7 +43,7 @@ public class OpenWnnEngineZHCN extends OpenWnnEngineZH {
 	 * @param dicFilePath
 	 *            The path name of writable dictionary(null if not use)
 	 */
-	public OpenWnnEngineZHCN(String dicLib, String dicFilePath) {
-		super(dicLib, dicFilePath);
+	public OpenWnnEngineZHCN(String dicLib, String dicFilePath,Context context) {
+		super(dicLib, dicFilePath,context);
 	}
 }

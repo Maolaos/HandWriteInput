@@ -39,7 +39,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 
-import com.example.softwaretest.BaseApplication;
+import com.example.softwaretest.FileUtil;
 import com.example.softwaretest.R;
 import com.googlecode.openwnn.legacy.CLOUDSONG.CandidateCallback;
 import com.googlecode.openwnn.legacy.ZH.DefaultSoftKeyboardZH;
@@ -385,6 +385,8 @@ public class OpenWnnZHCN extends OpenWnn {
 	/** Whether there is a continued predicted candidate */
 	private boolean mHasContinuedPrediction = false;
 
+	private Context context;
+
 	/** {@code Handler} for drawing candidates/displaying tutorial */
 	Handler mHandler = new Handler() {
 		@Override
@@ -415,7 +417,7 @@ public class OpenWnnZHCN extends OpenWnn {
 		mComposingText = new ComposingText();
 		mCandidatesViewManager = new TextCandidatesViewManager(-1);
 		mInputViewManager = new DefaultSoftKeyboardZH();
-		mConverter = mConverterZHCN = new OpenWnnEngineZHCN("libWnnZHCNDic.so", BaseApplication.composeLocation("writableZHCN.dic"));
+		mConverter = mConverterZHCN = new OpenWnnEngineZHCN("libWnnZHCNDic.so", FileUtil.composeLocation("writableZHCN.dic",context),context);
 
 		mPreConverter = mPreConverterSymbols = new LetterConverterZH();
 		mFilter = new CandidateFilter();
@@ -434,6 +436,7 @@ public class OpenWnnZHCN extends OpenWnn {
 	 */
 	public OpenWnnZHCN(Context context) {
 		this();
+		this.context=context;
 		attachBaseContext(context);
 	}
 

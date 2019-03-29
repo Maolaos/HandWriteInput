@@ -1,7 +1,10 @@
 package com.example.softwaretest;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.IllegalFormatCodePointException;
 import java.util.List;
@@ -48,7 +51,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
     private ArrayList<String> fileList = new ArrayList<String>();
 
     private StringBuilder currentInput = new StringBuilder();
-    private CloudKeyboardInputManager ckManager;
+    //private CloudKeyboardInputManager ckManager;
     private List<WnnWord> requestList;
 
     @Override
@@ -56,13 +59,15 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input_view);
 
+
+
         container = (LinearLayout) findViewById(R.id.container);
         candidateContainer = (RelativeLayout) findViewById(R.id.candidateContainer);
         handWritingBoard = (HandWritingBoardLayout) findViewById(R.id.handwrtingboard);
         btnCleanHandWriting = (Button) findViewById(R.id.clean);
         inputShow = (TextView) findViewById(R.id.candidateselected);
         btnDelete = (ImageView) findViewById(R.id.delete);
-        ckManager = new CloudKeyboardInputManager();
+       // ckManager = new CloudKeyboardInputManager();
         mCandidateView = new CandidateView(this);
         mCandidateView.setOnCandidateSelected(this);
 
@@ -79,7 +84,27 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
         findViewById(R.id.finish).setOnClickListener(this);
         findViewById(R.id.cancel).setOnClickListener(this);
         btnDelete.setOnClickListener(this);
-        showHandWriting();
+
+
+
+        try {
+            File file1 = new File(FileUtil.composeLocation("writableZHCN.dic",this));
+            File file2 = new File(FileUtil.composeLocation("writableZHCN.dic-journal",this));
+            if (!file1.exists()) {
+                FileUtil.copyBigDataToSD("writableZHCN.dic", file1.getName(),this);
+            }
+            if (!file2.exists()) {
+                FileUtil.copyBigDataToSD("writableZHCN.dic-journal", file2.getName(),this);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+
+    showHandWriting();
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             rxPermissions.request(Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.READ_EXTERNAL_STORAGE).subscribe(new Consumer<Boolean>() {
@@ -94,6 +119,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
 
 
     }
+
 
 
     @Override
@@ -124,7 +150,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
 
     void showHandWriting() {
         handWritingBoard.setVisibility(View.VISIBLE);
-        ckManager.delAll();
+       // ckManager.delAll();
         mCandidateView.clear();
 
     }
@@ -159,7 +185,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
         if (isHandWriting()) {
             resetHandWritingRecognize();
         } else {
-            ckManager.candidateSelected(wnnWord);
+           // ckManager.candidateSelected(wnnWord);
         }
 
 
