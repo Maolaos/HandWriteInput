@@ -64,6 +64,7 @@ public class CloudKeyboardInputManager implements CandidateCallback {
     private void candidateQueryed(WnnEngine converter) {
         if (converter == null) {
             return;
+
         }
 
 

@@ -88,6 +88,7 @@ public class FileUtil {
     }
 
 
+
     public  static String composeLocation(String fileName,Context context) {
         String dataLocation = "/data/data/" + context.getPackageName() + "/";
         return new StringBuilder().append(dataLocation).append(fileName).toString();

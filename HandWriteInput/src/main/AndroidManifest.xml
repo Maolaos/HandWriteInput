@@ -34,6 +34,7 @@
                 android:resource="@xml/method_zhcn" />
         </service>
 
+
         <activity android:name="com.googlecode.openwnn.legacy.ZH.CN.UserDictionaryToolsListZHCN" />
         <activity
             android:name="com.googlecode.openwnn.legacy.ZH.CN.UserDictionaryToolsEditZHCN"

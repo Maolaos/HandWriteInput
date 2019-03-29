@@ -37,6 +37,7 @@ import com.googlecode.openwnn.legacy.handwritingboard.HandWritingBoardLayout;
 @SuppressLint("NewApi")
 public class InputViewActivity extends   Activity implements OnCandidateSelected, OnHandWritingRecognize, OnClickListener {
 
+
     HandWritingBoardLayout handWritingBoard;
     TextView inputShow;
 

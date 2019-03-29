@@ -413,6 +413,7 @@ public class OpenWnnZHCN extends OpenWnn {
 	 */
 	public OpenWnnZHCN() {
 		super();
+
 		mSelf = this;
 		mComposingText = new ComposingText();
 		mCandidatesViewManager = new TextCandidatesViewManager(-1);
