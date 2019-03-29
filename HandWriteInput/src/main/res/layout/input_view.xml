@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/clean"
+            android:layout_width="80dp"
+            android:layout_height="34dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_clear_input"
+            android:text="擦除重写"
+            android:textColor="#ffffff"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="80dp"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_clear_input"
+            android:text="取消"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/clean"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="80dp"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_clear_input"
+            android:text="完成"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/cancel"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/candidateselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:textColor="#000000"
+            android:hint="请在白色区域内手写您的姓名"/>
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/input_delete"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/candidateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0" >
+
+
+        <com.googlecode.openwnn.legacy.handwritingboard.HandWritingBoardLayout
+            android:id="@+id/handwrtingboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/ethank/Documents/gerrit/SoftWareTest/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/Users/ethank/Documents/gerrit/SoftWareTest/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jiaoyanan/Desktop/SoftWareTest-master/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/Users/jiaoyanan/Desktop/SoftWareTest-master/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    }
+]
