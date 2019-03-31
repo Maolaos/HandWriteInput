@@ -51,7 +51,7 @@ public class CandidateView extends View {
 	 * Construct a CandidateView for showing suggested words for completion.
 	 * 
 	 * @param context
-	 * @param attrs
+	 * @param
 	 */
 	public CandidateView(Context context) {
 		super(context);
@@ -248,6 +248,8 @@ public class CandidateView extends View {
 			invalidate();
 			break;
 		case MotionEvent.ACTION_UP:
+
+
 			if (!mScrolled) {
 				if (mSelectedIndex >= 0) {
 					// mService.pickSuggestionManually(mSelectedIndex);
@@ -256,9 +258,11 @@ public class CandidateView extends View {
 
 				}
 			}
-			mSelectedIndex = -1;
+			clear();
 			removeHighlight();
 			requestLayout();
+
+
 			break;
 		}
 		return true;

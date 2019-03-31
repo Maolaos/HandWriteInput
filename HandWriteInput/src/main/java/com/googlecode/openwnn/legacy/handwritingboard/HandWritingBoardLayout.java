@@ -200,7 +200,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 	public void reset_recognize() {
 
 		if (mCanvas != null) {
-			mCanvas.drawColor(0xFFFFFFFF, PorterDuff.Mode.CLEAR);
+			mCanvas.drawColor(0xFFFFFFFF);
 		}
 		mCount = 0;
 		mResult1 = new char[256];
@@ -343,7 +343,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 			isStop = false;
 			for (int pix :
 					pixs) {
-				if (pix != 0xFFFF0000) {
+				if (pix != 0xFFFFFFFF) {
 					top = i;
 					isStop = true;
 					break;
@@ -359,7 +359,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 			isStop = false;
 			for (int pix :
 					pixs) {
-				if (pix != 0xFFFF0000) {
+				if (pix != 0xFFFFFFFF) {
 					bottom = i;
 					isStop = true;
 					break;
@@ -375,7 +375,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 			bmp.getPixels(pixs, 0, 1, x, 0, 1, height);
 			isStop = false;
 			for (int pix : pixs) {
-				if (pix != 0xFFFF0000) {
+				if (pix != 0xFFFFFFFF) {
 					left = x;
 					isStop = true;
 					break;
@@ -390,7 +390,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 			bmp.getPixels(pixs, 0, 1, x, 0, 1, height);
 			isStop = false;
 			for (int pix : pixs) {
-				if (pix != 0xFFFF0000) {
+				if (pix != 0xFFFFFFFF) {
 					right = x;
 					isStop = true;
 					break;

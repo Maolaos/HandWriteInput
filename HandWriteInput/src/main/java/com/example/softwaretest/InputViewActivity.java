@@ -15,6 +15,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -55,6 +57,24 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
     //private CloudKeyboardInputManager ckManager;
     private List<WnnWord> requestList;
 
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+             if (msg.what==0102){
+                 try {
+                     String path = FileUtil.getAppFilePath(InputViewActivity.this) + System.currentTimeMillis() + ".png";
+                     handWritingBoard.save(path, false, 0);
+                     fileList.add(path);
+                 } catch (IOException e) {
+                     e.printStackTrace();
+                 }
+                 if (isHandWriting()) {
+                     resetHandWritingRecognize();
+                 }
+            }
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +97,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
 
         lp1.width = ViewGroup.LayoutParams.MATCH_PARENT;
         candidateContainer.addView(mCandidateView, lp1);
-
+        mCandidateView.setVisibility(View.GONE);
         handWritingBoard.setOnHandWritingRecognize(this);
 
         btnCleanHandWriting.setOnClickListener(this);
@@ -101,7 +121,6 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
 
 
@@ -138,6 +157,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
         } else if (view.getId() == R.id.finish) {
             Intent intent = new Intent();
             intent.putStringArrayListExtra("path", fileList);
+            intent.putExtra("name", inputShow.getText().toString());
             setResult(100, intent);
 
             finish();
@@ -173,21 +193,10 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
             inputShow.setText(currentInput.toString());
             btnDelete.setVisibility(View.VISIBLE);
         }
+        handler.sendEmptyMessage(0102);
 
-        mCandidateView.clear();
 
-        try {
-            String path = FileUtil.getAppFilePath(this.getApplicationContext()) + System.currentTimeMillis() + ".png";
-            handWritingBoard.save(path, false, 100);
-            fileList.add(path);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (isHandWriting()) {
-            resetHandWritingRecognize();
-        } else {
-           // ckManager.candidateSelected(wnnWord);
-        }
+
 
 
     }
@@ -212,6 +221,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
             }
 
         }
+        mCandidateView.setVisibility(View.VISIBLE);
         mCandidateView.setSuggestions(requestList, false, false);
     }
 
@@ -228,5 +238,9 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
         return handWritingBoard.getVisibility() == View.VISIBLE;
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
+    }
 }
