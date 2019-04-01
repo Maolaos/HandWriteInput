@@ -21,6 +21,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
@@ -64,7 +65,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
              if (msg.what==0102){
                  try {
                      String path = FileUtil.getAppFilePath(InputViewActivity.this) + System.currentTimeMillis() + ".png";
-                     handWritingBoard.save(path, false, 0);
+                     handWritingBoard.save(path, true, 10);
                      fileList.add(path);
                  } catch (IOException e) {
                      e.printStackTrace();
@@ -78,6 +79,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.input_view);
 
 

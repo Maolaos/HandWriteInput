@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.softwaretest.InputViewActivity"
-            android:label="自定义输入法" >
+            android:label="自定义输入法"
+            android:theme="@style/MyDialogStyle">
 
         </activity>
         <activity android:name="com.example.softwaretest.MainActivity" >

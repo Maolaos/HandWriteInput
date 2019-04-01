@@ -344,7 +344,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 			for (int pix :
 					pixs) {
 				if (pix != 0xFFFFFFFF) {
-					top = i;
+					top = 0;
 					isStop = true;
 					break;
 				}
@@ -360,7 +360,7 @@ public class HandWritingBoardLayout extends AbsoluteLayout {
 			for (int pix :
 					pixs) {
 				if (pix != 0xFFFFFFFF) {
-					bottom = i;
+					bottom = height;
 					isStop = true;
 					break;
 				}

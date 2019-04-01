@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-44:12
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml
@@ -36,7 +36,7 @@ INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/And
 		INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml
 		INJECTED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml
 application
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:11:5-42:19
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:11:5-43:19
 	android:icon
 		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:13:9-45
 	android:allowBackup
@@ -44,44 +44,46 @@ ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/Androi
 	android:theme
 		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:14:9-40
 activity#com.example.softwaretest.InputViewActivity
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:15:9-19:20
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:15:9-20:20
 	android:label
 		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:17:13-35
+	android:theme
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:18:13-49
 	android:name
 		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:16:13-70
 activity#com.example.softwaretest.MainActivity
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:20:9-21:20
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:21:9-22:20
 	android:name
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:20:19-71
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:21:19-71
 service#com.googlecode.openwnn.legacy.OpenWnnZHCN
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:23:9-35:19
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:24:9-36:19
 	android:label
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:26:13-30
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:27:13-30
 	android:id
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:24:13-46
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:25:13-46
 	android:permission
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:27:13-70
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:28:13-70
 	android:name
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:25:13-69
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:26:13-69
 intent-filter#android.view.InputMethod
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:28:13-30:29
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:29:13-31:29
 action#android.view.InputMethod
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:29:17-67
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:30:17-67
 	android:name
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:29:25-64
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:30:25-64
 meta-data#android.view.im
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:32:13-34:55
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:33:13-35:55
 	android:resource
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:34:17-52
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:35:17-52
 	android:name
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:33:17-47
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:34:17-47
 activity#com.googlecode.openwnn.legacy.ZH.CN.UserDictionaryToolsListZHCN
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:38:9-100
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:39:9-100
 	android:name
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:38:19-97
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:39:19-97
 activity#com.googlecode.openwnn.legacy.ZH.CN.UserDictionaryToolsEditZHCN
-ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:39:9-41:36
+ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:40:9-42:36
 	android:label
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:41:13-33
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:42:13-33
 	android:name
-		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:40:13-91
+		ADDED from /Users/jiaoyanan/Desktop/HandWriteDemo/HandWriteInput/src/main/AndroidManifest.xml:41:13-91

@@ -415,6 +415,7 @@ int string user_dictionary_title_read 0x7f1500c7
 int string user_dictionary_words_duplication_message 0x7f1500c8
 int style AppBaseTheme 0x7f160001
 int style AppTheme 0x7f160002
+int style MyDialogStyle 0x7f160003
 int xml default_cn_full_symbols 0x7f190001
 int xml default_cn_full_symbols_shift 0x7f190002
 int xml default_cn_half_symbols 0x7f190003

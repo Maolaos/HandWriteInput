@@ -438,6 +438,7 @@ public final class R {
     public static final class style {
         public static int AppBaseTheme = 0x7f160001;
         public static int AppTheme = 0x7f160002;
+        public static int MyDialogStyle = 0x7f160003;
     }
     public static final class xml {
         public static int default_cn_full_symbols = 0x7f190001;
