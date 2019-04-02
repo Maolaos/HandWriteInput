@@ -154,6 +154,9 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
             if (currentInput.length() == 0) {
                 btnDelete.setVisibility(View.GONE);
             }
+            if (fileList.size()>0){
+                fileList.remove(fileList.size()-1);
+            }
         } else if (view.getId() == R.id.cancel) {
             finish();
         } else if (view.getId() == R.id.finish) {
