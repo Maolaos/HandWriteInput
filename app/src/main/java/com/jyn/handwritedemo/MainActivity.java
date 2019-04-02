@@ -56,91 +56,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-            Bitmap newBmp = (Bitmap) bitmaps.get(0);
-            for(int i = 1;i<bitmaps.size();i++) {
-                Bitmap bmp = (Bitmap) bitmaps.get(i);
-                newBmp = newBitmap(newBmp,bmp);
-            }
-            File rstFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "resultImg.jpg");
-            if (!rstFile.exists())
-                try {
-                    rstFile.createNewFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            // save(newBmp, rstFile, Bitmap.CompressFormat.JPEG, true);
-            image.setImageBitmap(newBmp);
+
 
         }
     }
 
 
-    public  Bitmap newBitmap(Bitmap bmp1, Bitmap bmp2) {
-        Bitmap retBmp;
-        int height =bmp1.getHeight() ;
-        Paint paint = new Paint();
-        paint.setColor(0xFFFFFFFF);
-        if (bmp2.getHeight() != height) {
-            //以第一张图片的宽度为标准，对第二张图片进行缩放。
 
-            int w2 = bmp2.getWidth() * height / bmp2.getHeight();
-            retBmp = Bitmap.createBitmap(bmp1.getWidth() + w2, height, Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(retBmp);
-            Bitmap newSizeBmp2 = resizeBitmap(bmp2, w2, height);
-            canvas.drawBitmap(bmp1, 0, 0, paint);
-            canvas.drawBitmap(newSizeBmp2, bmp1.getWidth(), 0, paint);
-        } else {
-            //两张图片宽度相等，则直接拼接。
-
-            retBmp = Bitmap.createBitmap(bmp1.getWidth() + bmp2.getWidth(), height, Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(retBmp);
-            canvas.drawBitmap(bmp1, 0, 0, paint);
-            canvas.drawBitmap(bmp2, bmp1.getWidth(), 0, paint);
-        }
-
-
-        return retBmp;
-    }
-    public static Bitmap resizeBitmap(Bitmap bitmap, int newWidth, int newHeight) {
-        float scaleWidth = ((float) newWidth) / bitmap.getWidth();
-        float scaleHeight = ((float) newHeight) / bitmap.getHeight();
-        Matrix matrix = new Matrix();
-        matrix.postScale(scaleWidth, scaleHeight);
-        Bitmap bmpScale = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-        return bmpScale;
-    }
-
-    /**
-     * 保存图片到文件File。
-     *
-     * @param src     源图片
-     * @param file    要保存到的文件
-     * @param format  格式
-     * @param recycle 是否回收
-     * @return true 成功 false 失败
-     */
-    public static boolean save(Bitmap src, File file, Bitmap.CompressFormat format, boolean recycle) {
-        if (isEmptyBitmap(src))
-            return false;
-
-        OutputStream os;
-        boolean ret = false;
-        try {
-            os = new BufferedOutputStream(new FileOutputStream(file));
-            ret = src.compress(format, 100, os);
-            if (recycle && !src.isRecycled())
-                src.recycle();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return ret;
-    }
-
-    /**
-     * Bitmap对象是否为空。
-     */
-    public static boolean isEmptyBitmap(Bitmap src) {
-        return src == null || src.getWidth() == 0 || src.getHeight() == 0;
-    }
 }

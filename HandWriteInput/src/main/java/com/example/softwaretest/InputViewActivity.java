@@ -99,7 +99,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
 
         lp1.width = ViewGroup.LayoutParams.MATCH_PARENT;
         candidateContainer.addView(mCandidateView, lp1);
-        mCandidateView.setVisibility(View.GONE);
+        //mCandidateView.setVisibility(View.GONE);
         handWritingBoard.setOnHandWritingRecognize(this);
 
         btnCleanHandWriting.setOnClickListener(this);
