@@ -64,7 +64,7 @@ public class InputViewActivity extends   Activity implements OnCandidateSelected
             super.handleMessage(msg);
              if (msg.what==0102){
                  try {
-                     String path = FileUtil.getAppFilePath(InputViewActivity.this) + System.currentTimeMillis() + ".png";
+                     String path = FileUtil.getAppFilePath(InputViewActivity.this) + System.currentTimeMillis() + "._png";
                      handWritingBoard.save(path, true, 10);
                      fileList.add(path);
                  } catch (IOException e) {
